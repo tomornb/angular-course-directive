@@ -8,6 +8,8 @@ app.directive("superhero", function() {
         link: function(scope, element) {
           element.bind("mouseenter", function() {
             console.log(scope.abilities);
+            element.append("<h3>" + JSON.stringify(scope.abilities) + "<h3>")
+
           })
         },
         controller: function($scope) {
