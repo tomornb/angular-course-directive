@@ -12,10 +12,11 @@ app.directive("isolate", function() {
         scope: {
         	click: "&",
         	m: "=",
+        	e: "@",        	
         },
         restrict: "E",
         template: 'type : <input type="text" ng-model="data">' +
-        '<button ng-click="click({y: data})">{{ info }} {{ m }}</button>',
+        '<button ng-click="click({y: data})">{{ info }} {{ m }} {{ e }}</button>',
 		controller: function($scope){
 			$scope.info = 'hello tomorn';
 			//debugger;
